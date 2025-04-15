@@ -80,6 +80,9 @@ const Navbar = () => {
                     <NavLink onClick={() => setvisible(false)} to={"/contact"} className={"py-2 pl-6 border- border-gray-400"}  >
                         CONTACT
                     </NavLink>
+                    <a onClick={() => setvisible(false)}  target='_blank' href='https://forever-admin-chi-one.vercel.app' className={"py-2 pl-6 border- border-gray-400"}  >
+                        ADMIN PANEL
+                    </a>
                    
                 </div>
 
