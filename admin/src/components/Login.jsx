@@ -3,20 +3,21 @@ import React, { useState } from 'react'
 import toast from 'react-hot-toast';
 import { backendUrl } from '../App';
 
-const Login = ({setToken}) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+const Login = ({ setToken }) => {
+    const [email, setEmail] = useState('admin@gmail.com');
+    const [password, setPassword] = useState('admin@123');
+
     const onSubmitHandler = async (e) => {
         try {
             e.preventDefault();
             const res = await axios.post(backendUrl + "/api/user/admin", {
                 email,
                 password
-            }); 
-            
-            if(res.data.success){
+            });
+
+            if (res.data.success) {
                 setToken(res?.data?.token)
-            }else{
+            } else {
                 toast.error(res.data.message)
             }
 
@@ -24,7 +25,7 @@ const Login = ({setToken}) => {
 
         } catch (error) {
             console.log(error);
-            
+
             toast.error(error)
 
         }

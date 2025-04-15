@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <div className='flex items-center justify-between py-5 font-medium'>
             <Link to={"/"}> <img src={assets.logo} className='w-36' alt="" /></Link>
-            <ul className='hidden sm:flex gap-5 text-sm text-gray-700'>
+            <ul className='hidden sm:flex items-center gap-5 text-sm text-gray-700'>
                 <NavLink to={"/"} className={`flex flex-col items-center gap-1 ${location.pathname === "/" ? "font-bold" : ""}`}>
                     <p>HOME</p>
                     <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
@@ -35,6 +35,7 @@ const Navbar = () => {
                     <p>CONTACT</p>
                     <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
                 </NavLink>
+                <a target='_blank' href='https://forever-admin-chi-one.vercel.app' className={` border border-gray-700  px-4 flex flex-col items-center gap-1 rounded-full h-full   py-2`}>ADMIN PANEL</a>
 
             </ul>
             <div className="flex items-center gap-6">
@@ -79,6 +80,7 @@ const Navbar = () => {
                     <NavLink onClick={() => setvisible(false)} to={"/contact"} className={"py-2 pl-6 border- border-gray-400"}  >
                         CONTACT
                     </NavLink>
+                   
                 </div>
 
             </div>
